@@ -1,13 +1,13 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
 
 // components
-import Navbar from "./components/Navbar";
-import Home from "./Pages/home/Home";
-import About from "./Pages/about/About";
-import Projects from "./Pages/projects/Projects";
+import Navbar from './components/Navbar';
+import Home from './Pages/home/Home';
+import About from './Pages/about/About';
+import Projects from './Pages/projects/Projects';
 // styles
-import "./App.css";
+import './App.css';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,3 +28,41 @@ function App() {
 }
 
 export default App;
+
+/*import { Element } from "react-scroll";
+import { useState } from "react";
+
+// components
+import Navbar from "./components/Navbar";
+import Home from "./Pages/home/Home";
+import About from "./Pages/about/About";
+import Projects from "./Pages/projects/Projects";
+// styles
+import "./App.css";
+
+function App() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  return (
+    <div>
+      
+      <Navbar isOpen={isOpen} toggleMenu={toggleMenu} />
+
+      {isOpen && <div className="overlay"></div>}
+
+      <Element name="home">
+        <Home />
+      </Element>
+      <Element name="about">
+        <About />
+      </Element>
+      <Element name="project">
+        <Projects />
+      </Element>
+    </div>
+  );
+}
+
+export default App;*/

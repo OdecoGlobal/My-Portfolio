@@ -1,25 +1,38 @@
 .home {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  line-height: 1.3;
-  font-size: 1.4rem;
-  font-family: "Open Sans", sans-serif;
+  padding-top: 2em;
 }
 
-.home > * {
-  margin-top: 0.6em;
+.profile {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  font-size: 1.4rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.profile > * {
+  margin-top: 1em;
+}
+.profile > *:first-child {
+  margin-top: 0;
 }
 
 .intro {
   color: hsl(var(--clr-accent));
   font-family: var(--ff-mono);
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(20, end) infinite;
 }
 
 .name {
-  display: inline-block;
+  font-size: 1.4em;
   color: hsl(var(--clr-grey));
   font-weight: 700;
+  animation: fade 3s 3s steps(20, end) infinite;
 }
 .skill {
   text-transform: uppercase;
@@ -40,11 +53,47 @@
 }
 .bio {
   color: hsl(var(--clr-grey));
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 0.9em;
   /* letter-spacing: 1.1px; */
   word-spacing: 1.5px;
+}
+/* KEYFRAMES */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  21% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  41% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  61% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  81% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes typing {
@@ -55,5 +104,47 @@
     width: 100%;
   }
 }
+@media screen and (min-width: 800px) {
+  .home {
+    max-height: 80vh;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .profile {
+    flex: 1;
+    margin: 0 15px 0 0;
+  }
+  .profile {
+    font-size: 1.3em;
+  }
+  .intro {
+    font-size: 1em;
+  }
+  .subheading {
+    line-height: 1.2;
+  }
+  .bio {
+    font-size: 0.8em;
+    letter-spacing: 1.3px;
+    word-spacing: 2px;
+    line-height: 1.5;
+  }
+  .projectSnippet {
+    overflow: auto;
+    flex: 1.3;
+  }
+}
 
-/* KEYFRAMES */
+@media screen and (min-width: 950px) {
+  .profile {
+    font-size: 1.8em;
+  }
+  .name {
+    margin-top: 20px;
+    font-size: 2.2em;
+  }
+  .subheading {
+    font-size: 1.7em;
+    margin-top: 20px;
+  }
+}
