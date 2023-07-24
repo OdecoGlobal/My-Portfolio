@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useState } from "react";
+
+// components
+import Navbar from "./components/Navbar";
+import Home from "./Pages/home/Home";
+import About from "./Pages/about/About";
+import Projects from "./Pages/projects/Projects";
+// styles
+import "./App.css";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar isOpen={isOpen} toggleMenu={toggleMenu} />
+      {isOpen && <div className="overlay"></div>}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/project" element={<Projects />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
