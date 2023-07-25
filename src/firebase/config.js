@@ -1,23 +1,17 @@
 // version 10
-import { initializeApp } from "firebase/app";
-import { getFirestore, Timestamp } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBxYs3YdUer0T824ck9lVtu10tYartVxVI",
-  authDomain: "mymoney-2c3ef.firebaseapp.com",
-  projectId: "mymoney-2c3ef",
-  storageBucket: "mymoney-2c3ef.appspot.com",
-  messagingSenderId: "401809915735",
-  appId: "1:401809915735:web:ed5f9f8cf045ec34214812",
+  apiKey: 'AIzaSyDn6ZbGmQw4Zhe-dS5uugpkKS9_NdMEAoY',
+  authDomain: 'odeco-portfolio.firebaseapp.com',
+  projectId: 'odeco-portfolio',
+  storageBucket: 'odeco-portfolio.appspot.com',
+  messagingSenderId: '884043795347',
+  appId: '1:884043795347:web:56e67e2ca6a3b25e68b666',
 };
 
-// init firebase
-// version 10
 const app = initializeApp(firebaseConfig);
 const projectFirestore = getFirestore(app);
-const projectAuth = getAuth(app);
-const timestamp = Timestamp;
-// const timestamp = firebase.firestore.Timestamp;
 
-export { projectFirestore, projectAuth, timestamp };
+export { projectFirestore };

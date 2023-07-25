@@ -6,14 +6,16 @@ import ProjectDetails from '../../components/ProjectDetails';
 // styles
 import styles from './Home.module.css';
 
-export default function Home() {
+export default function Home({ projects, isPending, error }) {
   const mySkills = [
     `I develop web applications`,
     `I design web applications`,
     `I design graphics & logos`,
     `I'm a Biomedical Scientist`,
   ];
+
   const [skillIndex, setSkillIndex] = useState(0);
+
   // const mySkills = useRef(_mySkills);
 
   useEffect(() => {
@@ -21,7 +23,7 @@ export default function Home() {
       setSkillIndex(prevIndex => (prevIndex + 1) % mySkills.length);
     }, 5000);
     return () => clearInterval(intervalId);
-  }, [mySkills]);
+  }, [mySkills.length]);
 
   return (
     <section className={styles.home}>
@@ -48,7 +50,9 @@ export default function Home() {
         </p>
       </div>
       <div className={styles.projectSnippet}>
-        <ProjectDetails />
+        {error && <p className="error">{error}</p>}
+        {isPending && <p className="loading">Loading...</p>}
+        {projects && <ProjectDetails projects={projects} />}
       </div>
     </section>
   );

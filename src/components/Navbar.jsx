@@ -4,7 +4,7 @@ import styles from './Navbar.module.css';
 // assets
 import MyLogo from '../assets/MyLogo.svg';
 
-export default function Navbar({ isOpen, toggleMenu }) {
+export default function Navbar({ isOpen, toggleMenu, close }) {
   return (
     <nav className={styles.navbar}>
       <Link to="/" className={styles.navlogo}>
@@ -25,7 +25,10 @@ export default function Navbar({ isOpen, toggleMenu }) {
         <div className={styles.bar}></div>
       </div>
 
-      <ul className={`${styles['menu-link']} ${isOpen ? styles['open'] : ''}`}>
+      <ul
+        className={`${styles['menu-link']} ${isOpen ? styles['open'] : ''}`}
+        onClick={close}
+      >
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -33,7 +36,7 @@ export default function Navbar({ isOpen, toggleMenu }) {
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/project">Projects</Link>
+          <Link to="/projects">Projects</Link>
         </li>
       </ul>
     </nav>
