@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/OdecoGlobal.github.io/My-Portfolio/static/css/main.5eb5087c.css",
+    "main.js": "/OdecoGlobal.github.io/My-Portfolio/static/js/main.c4b9223f.js",
+    "static/media/MyLogo.svg": "/OdecoGlobal.github.io/My-Portfolio/static/media/MyLogo.3fa511d5ba4724ef19f2a6ca265a3221.svg",
+    "index.html": "/OdecoGlobal.github.io/My-Portfolio/index.html",
+    "static/media/github.svg": "/OdecoGlobal.github.io/My-Portfolio/static/media/github.04be58c17b3d5e9744424d414240dd85.svg",
+    "static/media/twitter.svg": "/OdecoGlobal.github.io/My-Portfolio/static/media/twitter.9507a17a5de960b0706e6ad740252a73.svg",
+    "static/media/linkedin.svg": "/OdecoGlobal.github.io/My-Portfolio/static/media/linkedin.033b1683dcd2583d7ff2c6ce56160dac.svg",
+    "main.5eb5087c.css.map": "/OdecoGlobal.github.io/My-Portfolio/static/css/main.5eb5087c.css.map",
+    "main.c4b9223f.js.map": "/OdecoGlobal.github.io/My-Portfolio/static/js/main.c4b9223f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5eb5087c.css",
+    "static/js/main.c4b9223f.js"
+  ]
+}
