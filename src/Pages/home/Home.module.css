@@ -32,7 +32,6 @@
   font-size: 1.4em;
   color: hsl(var(--clr-grey));
   font-weight: 700;
-  animation: fade 3s 3s steps(20, end) infinite;
 }
 .skill {
   text-transform: uppercase;
@@ -56,45 +55,31 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 0.9em;
-  /* letter-spacing: 1.1px; */
   word-spacing: 1.5px;
 }
-/* KEYFRAMES */
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  1% {
-    opacity: 0.2;
-  }
-  20% {
-    opacity: 0.2;
-  }
-  21% {
-    opacity: 0.4;
-  }
-  40% {
-    opacity: 0.4;
-  }
-  41% {
-    opacity: 0.6;
-  }
-  60% {
-    opacity: 0.6;
-  }
-  61% {
-    opacity: 0.8;
-  }
-  80% {
-    opacity: 0.8;
-  }
-  81% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
+.logoimg {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  /* width: 50px; */
+}
+.logoIcon {
+  width: 50px;
+  margin-right: 20px;
+  filter: invert(68%) sepia(90%) saturate(367%) hue-rotate(133deg)
+    brightness(91%) contrast(96%);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .logoIcon {
+    animation: logo-spin infinite 8s linear;
   }
 }
+.logoIcon:hover {
+  filter: invert(100%) saturate(1%) sepia(100%) hue-rotate(352deg)
+    brightness(102%) contrast(101%);
+}
+
+/* KEYFRAMES */
 
 @keyframes typing {
   0% {
@@ -104,6 +89,16 @@
     width: 100%;
   }
 }
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media screen and (min-width: 800px) {
   .home {
     max-height: 80vh;

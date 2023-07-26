@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { projectFirestore } from '../../firebase/config';
 import { doc, getDoc } from 'firebase/firestore';
-
+import loadingLogo from '../../assets/MyLogo.svg';
 // styles
 import styles from './ProjectPage.module.css';
 
@@ -37,7 +37,7 @@ export default function ProjectPage() {
   return (
     <section>
       {error && <p className="error">{error}</p>}
-      {isPending && <p className="loading">Loading...</p>}
+      {isPending && <img src={loadingLogo} className="loading" />}
       {project && (
         <div className={styles.project_card}>
           <h3 className={styles.title}>{project.title}</h3>

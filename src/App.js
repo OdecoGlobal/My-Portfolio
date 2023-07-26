@@ -65,7 +65,12 @@ function App() {
           }
         />
         <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route
+          path="/projects"
+          element={
+            <Projects projects={project} isPending={isPending} error={error} />
+          }
+        />
         <Route path="/project/:id" element={<ProjectPage />} />
       </Routes>
     </BrowserRouter>

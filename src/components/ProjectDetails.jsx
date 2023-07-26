@@ -8,7 +8,9 @@ export default function ProjectDetails({ projects }) {
         <Link key={project.id} to={`/project/${project.id}`}>
           <div className={styles.card}>
             <h3 className={styles.title}>{project.title}</h3>
-            <p className={styles.detail}>{project.details.substring(0, 80)}</p>
+            <p className={styles.detail}>
+              {project.details.substring(0, 120)} ...
+            </p>
             <ul>
               {project.stack.map((lang, i) => (
                 <li key={i}>{lang}</li>
